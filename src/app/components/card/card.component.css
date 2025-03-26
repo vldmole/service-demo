@@ -1,0 +1,49 @@
+.card{
+  border: solid 2px red;
+  width: 250px;
+  height: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #232323;
+  border-radius: 10px;
+}
+
+.card__title{
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px yellow;
+}
+
+.card__title > h3{
+  color:white;
+
+  border: solid 1px yellow;
+}
+.card__body{
+  border: solid 1px cyan;
+
+  background-color: #616161;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70%;
+}
+
+.card__stats{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: solid 1px yellow;
+}
+
+.card__stats__type{
+  color: white;
+  background-color: coral;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 4px;
+  border: solid 1px red;
+}
