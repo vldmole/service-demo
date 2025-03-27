@@ -1,16 +1,16 @@
 <div class="card">
   <div class="card__title">
-    <h3>{{name}}</h3>
+    <h3>{{pokemonData.name}}</h3>
   </div>
 
   <div class="card__body">
-    <img src="" alt="POKEmON" srcset=""/>
+    <img src={{pokemonData.imgUlrs[0]}} alt="POKEmON" srcset=""/>
   </div>
 
   <div class="card__stats">
     <span
       class="card__stats__type"
-      *ngFor="let item of abilities"
+      *ngFor="let item of pokemonData.types"
     > {{item}} </span>
   </div>
 </div>

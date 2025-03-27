@@ -1,10 +1,8 @@
 
-type Ability = {
-  name: string;
-}
-
-export type PokemonData = {
-  abilities: Ability[];
-  name: string;
-  id:number;
+export class PokemonData {
+  id:number = 0;
+  name: string="";
+  abilities: string[] = [];
+  types: string[] = [];
+  imgUlrs: string[] = [];
 }

@@ -11,8 +11,7 @@ import { PokemonData } from '../../models/pokemonData';
 })
 export class CardComponent implements OnInit {
 
-  name: string = "CHARIZARD";
-  abilities: string[] = ["FIRE", "ROCK"];
+  pokemonData: PokemonData = new PokemonData;
 
   constructor(private service: PokemonService)
   {
@@ -20,13 +19,11 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getPokemon(this.name).subscribe({
-      next: (pokemonData: PokemonData | any)=>{
-              console.log(pokemonData);
-            this.abilities = pokemonData.abilities.map((item:any)=> item.ability.name);
-            console.log(this.abilities);
-      },
-      error: (err:any)=>console.log(err)
+    this.pokemonData.name="charizard";
+    this.service.getPokemon(this.pokemonData.name).subscribe({
+
+      next: (pokemonData => this.pokemonData = pokemonData),
+      error: err=>err
     });
   }
 
